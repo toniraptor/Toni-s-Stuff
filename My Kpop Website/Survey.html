@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>K-Pop Survey</title>
+   
+   <link href = "Survey.css" rel="stylesheet" type="text/css">
+   <style>
+    *{
+        box-sizing: border-box;
+    }
+    body {
+        margin:0;
+    }
+    .header{ 
+        background-color:rgb(177, 107, 247);
+    padding: 20px;
+    text-align:center;
+    }
+    .topnav{
+        overflow: hidden;
+    Background-color:rgb(122, 88, 156);
+    }
+    .topnav a {
+        float:right;
+        display:block;
+        color: rgb(3, 1, 5);
+        text-align: centre;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-weight: normal;
+    }
+    .topnav a:hover {
+    background-color: rgb(243, 154, 228);
+    color:black;
+    }
+    /*column style of homepage*/
+.column {
+    float:left;
+    padding:3px;
+}
+.column.side {
+    width:15%;
+    
+}
+.column.middle {
+    width:70%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* responsive stack on smaller screen*/
+@media screen and (max-width:600px) {
+    .column.side, .column.middle {
+        width:100%;
+    }
+}
+img {
+    max-width: 100%;
+    height:auto;
+}
+         </style>
+    </head>
+    
+    <body>
+       <div class= "header">
+        <h1 id="title" class="text-center">K-Pop Survey Form</h1>
+        <p id="description" class="description text-center">
+          Thank you for taking the time to fill this survey!
+        </p>
+      </header>
+           </div>
+           <div class="topnav">
+            <a href="Survey.html" target="_self">K-Pop Survey</a>
+            <a href="Dictionary.html" target="_self">K-Pop Dictionary</a>
+            <a href="Groups.html" target="_self">K-Pop Groups</a>
+            <a href="Homepage.html" target="_self">Homepage</a>
+           </div>
+           <div class="row">
+            <div class="column side">
+                
+            </div>
+           <div class = "column middle">
+           <form id="survey-form">
+            <div class="form-group">
+              <label id="name-label" for="name">Name</label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label id="email-label" for="email">Email</label>
+              <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+            </div>
+            <div class="form-group">
+              <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+              <input type="number" name="age" id="number" min="15" max="99" class="form-control" placeholder="Age" />
+            </div>
+            <div>
+
+            </div>
+            <div class="form-group">
+              <p>What kind of K-Pop Fan are you?</p>
+              <label>
+                <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />A casual fan</label>
+              <label>
+                <input name="user-recommend" value="maybe" type="radio" class="input-radio" />A Single group fan</label>
+              <label>
+                <input name="user-recommend" value="not-sure" type="radio" class="input-radio" />A Multi group fan</label>
+              <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />K-Pop addict</label>
+                   </div>
+
+            <div class="form-group">
+              <p>How long have you been into K-Pop?</p>
+              <select id="dropdown" name="role" class="form-control" required>
+                <option disabled selected value>Select an option</option>
+                <option value="newbie">Under a year</option>
+                <option value="Stan">1-3 years</option>
+                <option value="multi stan">Over 3 years</option>
+                </select>
+            </div>
+           
+                 
+            <div class="form-group">
+              <p>
+                Has listening to K-Pop encouraged you to learn Korean?
+              </p>
+              <select id="most-like" name="mostLike" class="form-control" required>
+                <option disabled selected value>Select an option</option>
+                <option value="Y">Yes</option>
+                <option value="N">No</option>
+                <option value="A">I already speak it</option>
+              </select>
+            </div>
+        
+            <div class="form-group">
+              <p>
+                What app in particular do you use for watching/listening to K-Pop content?
+              </p>
+              <select id="most-like" name="mostLike" class="form-control" required>
+                <option disabled selected value>Select an option</option>
+                <option value="challenges">YouTube</option>
+                <option value="projects">Vlive</option>
+                <option value="community">Instagram</option>
+                <option value="openSource">Weverse</option>
+                <option value="clock">TikTok</option>
+                <option value="Bird">Twitter</option>
+              </select>
+            </div>
+
+            
+        
+            <div class="form-group">
+              <p>
+                What is your favorite K-Pop Band/Group?
+                <span class="clue">(Check all that apply)</span>
+              </p>
+        
+              <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />BTS</label>
+              <label>
+                <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Stray Kids</label>
+              <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Tomorrow x Together</label>
+              <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Ateez</label>
+              <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox" />SF9</label>
+              <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox" />Monsta X</label>
+              <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" />The Boyz</label>
+              <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />The Rose</label>
+              <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />A.C.E</label>
+              <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox" />EXO</label>
+              <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox" />ONEWE</label>
+              <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox" />Enhypen</label>
+            </div>
+
+            <div class="wrap">
+               <form action="">
+                <p>Being a K-Pop fan, means i listen to other genres less.</p>
+                <ul class='likert'>
+                  <li>
+                    <input type="radio" name="likert" value="strong_agree">
+                    <label>Strongly agree</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="strong_agree">
+                    <label>Agree</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="strong_agree">
+                    <label>Neutral</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="disagree">
+                    <label>Disagree</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="likert" value="strong_agree">
+                    <label>Strongly disagree</label>
+                  </li>
+                </ul>
+        
+            <div class="form-group">
+              <p>Any comments or suggestions?</p>
+              <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here💜"></textarea>
+            </div>
+        
+            <div class="form-group">
+              <button type="submit" id="submit" class="submit-button">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column side">
+            
+        </div>
+        
+        <footer></footer>
+    </body>
+    </html>
